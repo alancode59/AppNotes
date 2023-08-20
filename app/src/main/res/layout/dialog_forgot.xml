@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/dialogBox"
+        android:layout_width="369dp"
+        android:layout_height="274dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/white_box"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="21dp">
+
+        <TextView
+            android:id="@+id/forgotTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#03A9F4"
+            android:drawablePadding="8dp"
+            android:gravity="center"
+            android:padding="12dp"
+            android:text="¿Olvidaste tu contraseña?"
+            android:textSize="17sp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:text="Ingresa tu email:"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/emailBox"
+            app:layout_constraintTop_toBottomOf="@id/forgotTitle" />
+
+        <EditText
+            android:id="@+id/emailBox"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginBottom="30dp"
+            android:backgroundTint="@color/white"
+            android:maxLines="1"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/forgotTitle"
+            app:layout_constraintVertical_bias="0.607" />
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="8dp"
+            android:text="Cancelar"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:cornerRadius="20dp"
+            app:layout_constraintBottom_toBottomOf="@+id/dialogBox"
+            app:layout_constraintEnd_toStartOf="@+id/btnReset"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/emailBox"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <Button
+            android:id="@+id/btnReset"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="8dp"
+            android:text="Restablecer"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:cornerRadius="20dp"
+            app:layout_constraintBottom_toBottomOf="@+id/dialogBox"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnCancel" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
